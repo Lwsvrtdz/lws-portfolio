@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Louise Ishmael Virtudazo | Senior Fullstack Engineer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#1a1b26",
+                        "primary-fixed-dim": "#71d8c8",
+                        "surface": "#12131d",
+                        "inverse-on-surface": "#2f303b",
+                        "on-primary-fixed-variant": "#005048",
+                        "on-surface-variant": "#bdc9c6",
+                        "on-primary-container": "#005f55",
+                        "secondary-container": "#484855",
+                        "outline": "#879390",
+                        "on-surface": "#e2e1f1",
+                        "on-tertiary-container": "#4a5273",
+                        "background": "#12131d",
+                        "on-primary-fixed": "#00201c",
+                        "error-container": "#93000a",
+                        "primary-container": "#73daca",
+                        "on-secondary-fixed-variant": "#454652",
+                        "on-tertiary-fixed": "#111a37",
+                        "surface-variant": "#333440",
+                        "surface-dim": "#12131d",
+                        "surface-tint": "#71d8c8",
+                        "on-secondary-container": "#b8b7c6",
+                        "on-background": "#e2e1f1",
+                        "tertiary-fixed": "#dce1ff",
+                        "tertiary-fixed-dim": "#bdc5eb",
+                        "secondary-fixed-dim": "#c6c5d4",
+                        "surface-container": "#1e1f2a",
+                        "inverse-surface": "#e2e1f1",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-highest": "#333440",
+                        "on-secondary-fixed": "#1a1b26",
+                        "on-primary": "#003731",
+                        "outline-variant": "#3d4947",
+                        "inverse-primary": "#006b60",
+                        "on-tertiary-fixed-variant": "#3d4565",
+                        "surface-bright": "#383844",
+                        "on-error": "#690005",
+                        "tertiary-container": "#bfc7ed",
+                        "secondary-fixed": "#e2e1f1",
+                        "tertiary": "#dfe3ff",
+                        "secondary": "#c6c5d4",
+                        "surface-container-lowest": "#0c0d18",
+                        "error": "#ffb4ab",
+                        "surface-container-high": "#282935",
+                        "primary-fixed": "#8ef4e4",
+                        "on-secondary": "#2f303b",
+                        "on-tertiary": "#272f4d",
+                        "primary": "#90f7e6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "1.0rem",
+                        "xl": "1.25rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Space Grotesk", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #12131d;
+            color: #e2e1f1;
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .terminal-cursor::after {
+            content: '_';
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        .glass-panel {
+            background: rgba(51, 52, 64, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#12131d]/60 backdrop-blur-xl flex justify-between items-center px-8 h-16 w-full shadow-[0_20px_40px_rgba(12,13,24,0.4)]">
+<div class="font-mono font-bold text-[#90f7e6] tracking-widest uppercase">ROOT@PORTFOLIO:~</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-sm text-[#90f7e6] border-b-2 border-[#90f7e6] pb-1 font-bold transition-all duration-300" href="#home">~/home</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-sm text-slate-400 font-medium hover:text-[#90f7e6] hover:bg-[#90f7e6]/10 px-2 py-1 transition-all duration-300" href="#projects">/dev/projects</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-sm text-slate-400 font-medium hover:text-[#90f7e6] hover:bg-[#90f7e6]/10 px-2 py-1 transition-all duration-300" href="#experience">/etc/experience</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-sm text-slate-400 font-medium hover:text-[#90f7e6] hover:bg-[#90f7e6]/10 px-2 py-1 transition-all duration-300" href="#contact">/bin/contact</a>
+</div>
+<div class="flex items-center gap-4 text-[#90f7e6]">
+<span class="material-symbols-outlined cursor-pointer hover:scale-110 transition-transform">terminal</span>
+<span class="material-symbols-outlined cursor-pointer hover:scale-110 transition-transform">settings_ethernet</span>
+</div>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="min-h-screen flex flex-col justify-center px-8 md:px-24 py-20 relative overflow-hidden" id="home">
+<!-- Decorative Background Elements -->
+<div class="absolute top-1/4 -right-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 -left-20 w-80 h-80 bg-tertiary-container/5 rounded-full blur-[100px]"></div>
+<div class="z-10 max-w-5xl">
+<div class="font-mono text-primary mb-6 flex items-center gap-2 text-lg">
+<span class="opacity-50">louise@portfolio:~$</span>
+<span class="terminal-cursor">whoami</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-headline font-bold text-on-surface tracking-tighter mb-8 leading-tight">
+                    Louise Ishmael <br/>
+<span class="text-primary-container">Virtudazo</span>
+</h1>
+<p class="text-xl md:text-2xl font-body text-on-surface-variant max-w-2xl mb-12 border-l-2 border-primary/30 pl-6">
+                    Senior Fullstack Engineer | 6+ Years Exp | Laravel &amp; VueJS Specialist. <br/>
+<span class="text-on-surface/60 text-lg mt-2 block italic">Crafting precision-engineered digital architectures.</span>
+</p>
+<div class="flex flex-wrap gap-4">
+<a class="px-8 py-4 bg-primary text-on-primary font-bold rounded-lg hover:scale-105 transition-transform flex items-center gap-2" href="#projects">
+                        View Repositories
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<a class="px-8 py-4 bg-surface-container-high border border-outline-variant/30 text-on-surface font-semibold rounded-lg hover:bg-primary/10 hover:border-primary/50 transition-all" href="#contact">
+                        Initiate Connection
+                    </a>
+</div>
+</div>
+<!-- Absolute positioned code-snippet decoration -->
+<div class="hidden lg:block absolute right-24 bottom-24 w-1/3 opacity-40">
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/20 shadow-2xl">
+<div class="flex gap-1.5 mb-4">
+<div class="w-3 h-3 rounded-full bg-error/50"></div>
+<div class="w-3 h-3 rounded-full bg-primary/50"></div>
+<div class="w-3 h-3 rounded-full bg-secondary/50"></div>
+</div>
+<pre class="font-mono text-sm text-on-surface-variant"><span class="text-primary">class</span> <span class="text-secondary">Architect</span> {
+  <span class="text-primary">public</span> <span class="text-secondary">function</span> <span class="text-primary-container">build</span>($request) {
+    <span class="text-outline">return</span> <span class="text-primary">App</span>::make(<span class="text-primary-container">MVP</span>::class)
+      -&gt;scale()
+      -&gt;secure()
+      -&gt;deploy();
+  }
+}</pre>
+</div>
+</div>
+</section>
+<!-- Value Prop / Philosophy -->
+<section class="py-32 px-8 md:px-24 bg-surface-container-lowest relative">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<div class="grid grid-cols-2 gap-4">
+<div class="h-64 bg-surface-container-high rounded-xl flex items-center justify-center border border-outline-variant/10">
+<span class="material-symbols-outlined text-6xl text-primary/40">developer_board</span>
+</div>
+<div class="h-64 bg-surface-container rounded-xl flex items-center justify-center border border-outline-variant/10 mt-8">
+<span class="material-symbols-outlined text-6xl text-primary/40">rocket_launch</span>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<h2 class="text-4xl font-headline font-bold mb-8 text-on-surface">The Engineering <br/> <span class="text-primary">Philosophy</span></h2>
+<p class="text-on-surface-variant text-lg mb-8 leading-relaxed">
+                        Building MVPs &amp; Scaling Enterprise Apps the Right Way. I don't just write code; I architect systems that are built for longevity, performance, and developer ergonomics.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
+<span>Clean Architecture &amp; Domain Driven Design</span>
+</li>
+<li class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
+<span>Test-Informed Development Cycles</span>
+</li>
+<li class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
+<span>Scalable Cloud Infrastructure</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-32 px-8 md:px-24" id="projects">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="text-sm font-mono text-primary uppercase tracking-[0.3em] mb-4">./repositories</h2>
+<h3 class="text-5xl font-headline font-bold">Featured Projects</h3>
+</div>
+<div class="hidden md:block text-outline-variant font-mono">Total_Builds: 142</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project Card 1 -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden hover:bg-surface-container-high transition-all duration-500 border border-transparent hover:border-outline-variant/30">
+<div class="h-56 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent z-10"></div>
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Dark futuristic dashboard interface with cyan data visualizations and charts on a clean midnight blue background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOrwLpRtm7_wnjZpwQERjUSsQ8v1Z4HytJcxV6SqvewblvtT8WAOsZmfC8h9AxpvBOXYjI5KoWhPKq5K5C2qI94PI7Kk5K5fgZgH5_4KOpRuFcuynOQhPCQOw66g5kfZ2McpdK6XpkFSCqu2fLUtfZyqvURlPPX8smA4yRDmspJSfNUFcOAKu6x9HDSj-jfW0-_27nhXynTjJ7jd-FZ7oJANRFxgxgpPYBjIPiR_20jvVhZDulbmlLvOhD1ewj0Wjf4AHSY8VU2Mcw"/>
+</div>
+<div class="p-8">
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-mono text-primary flex items-center gap-1.5 uppercase">
+<span class="w-1 h-1 rounded-full bg-primary"></span> Laravel
+                            </span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-mono text-primary flex items-center gap-1.5 uppercase">
+<span class="w-1 h-1 rounded-full bg-primary"></span> Vue.js
+                            </span>
+</div>
+<h4 class="text-2xl font-headline font-bold mb-3 group-hover:text-primary transition-colors">Enterprise CRM Engine</h4>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+                            A highly scalable customer relationship management tool designed for real-time lead tracking and automated marketing funnels.
+                        </p>
+<a class="inline-flex items-center gap-2 text-primary font-mono text-sm group/link" href="#">
+                            EXECUTE_PROJECT <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden hover:bg-surface-container-high transition-all duration-500 border border-transparent hover:border-outline-variant/30">
+<div class="h-56 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent z-10"></div>
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Abstract 3D crystalline structure with neon cyan edges reflecting light in a deep void background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjzXvO7KWcDaSr544_bYqqVPQHOMCO1Vcrc1yWIjgEKSISXte_h60i1fEEFqvOW1yJuSBSJm-EefpxODW7ubYJEratEzCc1M_3rYVSnMRNLBoLqYxqo02KNuGk_vZK7narQj0Xv6sCE30ZaIL0W_8-19x9bqYBDlLT1XPh4txIRvqlVnmobkQZ3D9TTPWI-LVTrS8ADwSOIkBC0n88pRQgj8W9olbiIOAOJy6z3BQ-NFNNXSjb6Mft3FXG98dxR1inTVItXxJQVr7N"/>
+</div>
+<div class="p-8">
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-mono text-primary flex items-center gap-1.5 uppercase">
+<span class="w-1 h-1 rounded-full bg-primary"></span> AWS
+                            </span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-mono text-primary flex items-center gap-1.5 uppercase">
+<span class="w-1 h-1 rounded-full bg-primary"></span> Node.js
+                            </span>
+</div>
+<h4 class="text-2xl font-headline font-bold mb-3 group-hover:text-primary transition-colors">Serverless Analytics Portal</h4>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+                            Full-stack analytics platform leveraging Lambda functions for processing millions of data points per second with zero downtime.
+                        </p>
+<a class="inline-flex items-center gap-2 text-primary font-mono text-sm group/link" href="#">
+                            EXECUTE_PROJECT <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden hover:bg-surface-container-high transition-all duration-500 border border-transparent hover:border-outline-variant/30">
+<div class="h-56 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low to-transparent z-10"></div>
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Minimalist glowing code syntax highlighting on a terminal screen with blurred background elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMp8eIYz62-6WuOudtftmXYU1inUgiJnJT9v6NfCYwFMycQ_aMw14jI18Ms2mih0BwlUArq_BlqzKGbn8sPBJ2RhqriPTUrRd9uLwwDQNsG64pUuh4jqA58Obkg_mAZu8MHKGhETHhkmM8XW8tS3S_DF5mxnqorcXVDbgh_8bes_ETb4WOZg1KuFsNSa_ZbdjhD4fVS1NGGS6vfpQ45vO3F1sUux9icaPYD5XQPo_9H40840vskDoQKyJz5UAHB7_ZTWmta3VTSZRn"/>
+</div>
+<div class="p-8">
+<div class="flex gap-2 mb-4">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-mono text-primary flex items-center gap-1.5 uppercase">
+<span class="w-1 h-1 rounded-full bg-primary"></span> InertiaJS
+                            </span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-mono text-primary flex items-center gap-1.5 uppercase">
+<span class="w-1 h-1 rounded-full bg-primary"></span> Tailwind
+                            </span>
+</div>
+<h4 class="text-2xl font-headline font-bold mb-3 group-hover:text-primary transition-colors">SaaS Starter Kit v2</h4>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+                            A production-ready boilerplate for multi-tenant applications with built-in subscription management and modular billing.
+                        </p>
+<a class="inline-flex items-center gap-2 text-primary font-mono text-sm group/link" href="#">
+                            EXECUTE_PROJECT <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section class="py-32 px-8 md:px-24 bg-surface-container-low" id="experience">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-24">
+<h2 class="text-sm font-mono text-primary uppercase tracking-[0.3em] mb-4">/var/log/career</h2>
+<h3 class="text-5xl font-headline font-bold">Execution Timeline</h3>
+</div>
+<div class="space-y-12">
+<!-- Exp Item 1 -->
+<div class="relative pl-8 md:pl-12 border-l-2 border-outline-variant/30 pb-12">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-primary/20"></div>
+<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+<div>
+<h4 class="text-2xl font-bold text-on-surface">Senior Fullstack Developer</h4>
+<p class="text-primary font-mono text-sm">TechVanguard Systems</p>
+</div>
+<span class="text-on-surface-variant font-mono text-sm mt-2 md:mt-0">2021 — PRESENT</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                            Leading a team of 6 engineers in rebuilding the core fintech engine. Implemented microservices architecture using Laravel and optimized database queries reducing latency by 45%.
+                        </p>
+</div>
+<!-- Exp Item 2 -->
+<div class="relative pl-8 md:pl-12 border-l-2 border-outline-variant/30 pb-12">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-surface-container-highest border-2 border-outline-variant/50"></div>
+<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+<div>
+<h4 class="text-2xl font-bold text-on-surface">Fullstack Engineer</h4>
+<p class="text-primary font-mono text-sm">Nexus Digital Solutions</p>
+</div>
+<span class="text-on-surface-variant font-mono text-sm mt-2 md:mt-0">2018 — 2021</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                            Developed and maintained over 15 high-traffic client projects. Pioneered the internal adoption of Vue.js and automated CI/CD pipelines.
+                        </p>
+</div>
+<!-- Exp Item 3 -->
+<div class="relative pl-8 md:pl-12 border-l-2 border-outline-variant/30">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-surface-container-highest border-2 border-outline-variant/50"></div>
+<div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+<div>
+<h4 class="text-2xl font-bold text-on-surface">Junior Developer</h4>
+<p class="text-primary font-mono text-sm">Startup Labs</p>
+</div>
+<span class="text-on-surface-variant font-mono text-sm mt-2 md:mt-0">2017 — 2018</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                            Assisted in building MVP prototypes for early-stage startups. Focused on PHP backends and responsive CSS layouts.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section (Bento Style) -->
+<section class="py-32 px-8 md:px-24">
+<h2 class="text-center text-sm font-mono text-primary uppercase tracking-[0.3em] mb-16">SYSTEM_CAPABILITIES</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[120px]">
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between border border-outline-variant/10">
+<span class="material-symbols-outlined text-4xl text-primary">data_object</span>
+<div>
+<h4 class="text-2xl font-headline font-bold mb-2">Backend Excellence</h4>
+<p class="text-on-surface-variant text-sm">PHP, Laravel, Node.js, Python. Expert in building RESTful APIs and robust server logic.</p>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-xl p-6 flex flex-col justify-center items-center border border-primary/20">
+<span class="text-primary font-mono font-bold text-xl uppercase">Vue.js</span>
+</div>
+<div class="bg-surface-container-high rounded-xl p-6 flex flex-col justify-center items-center border border-outline-variant/10">
+<span class="text-on-surface font-mono font-bold text-xl uppercase">MySQL</span>
+</div>
+<div class="bg-surface-container-high rounded-xl p-6 flex flex-col justify-center items-center border border-outline-variant/10">
+<span class="text-on-surface font-mono font-bold text-xl uppercase">Redis</span>
+</div>
+<div class="md:col-span-2 bg-surface-container-low rounded-xl p-8 flex items-center gap-6 border border-outline-variant/10">
+<span class="material-symbols-outlined text-3xl text-primary">cloud</span>
+<p class="text-on-surface font-headline font-semibold">DevOps: AWS (EC2, S3, RDS), Docker, CI/CD</p>
+</div>
+<div class="bg-surface-container-high rounded-xl p-6 flex flex-col justify-center items-center border border-outline-variant/10">
+<span class="text-on-surface font-mono font-bold text-xl uppercase">Git</span>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 px-8 md:px-24 bg-surface-container-lowest" id="contact">
+<div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
+<div>
+<h2 class="text-5xl font-headline font-bold mb-8">Let's build something <span class="text-primary">extraordinary</span></h2>
+<p class="text-on-surface-variant text-lg mb-12">
+                        Currently available for senior fullstack roles or high-impact consulting projects. Drop a message or find me on the grid.
+                    </p>
+<div class="space-y-6">
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-xs font-mono uppercase text-outline-variant">Email</p>
+<p class="text-on-surface font-medium">louise.virtudazo@example.com</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<div>
+<p class="text-xs font-mono uppercase text-outline-variant">GitHub</p>
+<p class="text-on-surface font-medium">@ishmael-virtudazo</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-8 border border-outline-variant/10">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs font-mono uppercase text-outline-variant mb-2">Identifier</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-lg focus:ring-1 focus:ring-primary text-on-surface py-3 px-4 placeholder:text-outline-variant" placeholder="Your Name" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-mono uppercase text-outline-variant mb-2">Callback_Path</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-lg focus:ring-1 focus:ring-primary text-on-surface py-3 px-4 placeholder:text-outline-variant" placeholder="Email Address" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-mono uppercase text-outline-variant mb-2">Payload_Data</label>
+<textarea class="w-full bg-surface-container-lowest border-none rounded-lg focus:ring-1 focus:ring-primary text-on-surface py-3 px-4 placeholder:text-outline-variant" placeholder="Your Message" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-bold py-4 rounded-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
+                            TRANSMIT_MESSAGE
+                            <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-4 border-t border-[#90f7e6]/15 bg-[#0c0d18] flex flex-col md:flex-row justify-between items-center px-12 w-full">
+<div class="font-mono text-[10px] uppercase tracking-[0.2em] text-[#90f7e6]">SYS_UPTIME: 99.9% | LOC: 127.0.0.1 | CPU: IDLE</div>
+<div class="flex gap-8 mt-4 md:mt-0">
+<a class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 hover:text-[#90f7e6] transition-colors" href="#">kernel_logs</a>
+<a class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 hover:text-[#90f7e6] transition-colors" href="#">man_pages</a>
+</div>
+</footer>
+</body></html>
