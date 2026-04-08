@@ -1,75 +1,67 @@
-# Nuxt Minimal Starter
+# LWS Portfolio
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Personal online portfolio built with Nuxt 4 and Tailwind CSS.
+
+## Stack
+
+- Nuxt 4
+- Vue 3
+- Tailwind CSS
+
+## Project Structure
+
+- [`app/pages/index.vue`](/home/louise/Documents/projects/lws-portfolio/app/pages/index.vue): main landing page composition
+- [`app/components/portfolio`](/home/louise/Documents/projects/lws-portfolio/app/components/portfolio): reusable portfolio sections
+- [`app/data/portfolio.ts`](/home/louise/Documents/projects/lws-portfolio/app/data/portfolio.ts): navigation, projects, experience, skills, and contact content
+- [`app/assets/css/tailwind.css`](/home/louise/Documents/projects/lws-portfolio/app/assets/css/tailwind.css): global Tailwind entry and custom utility styles
+- [`tailwind.config.ts`](/home/louise/Documents/projects/lws-portfolio/tailwind.config.ts): theme tokens matching the mockup palette
 
 ## Setup
 
-Make sure to install dependencies:
+Install dependencies:
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+## Development
 
-Start the development server on `http://localhost:3000`:
+Run the local dev server at `http://localhost:3000`:
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## Build
 
-Build the application for production:
+Create a production build:
 
 ```bash
-# npm
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+Preview the production build locally:
 
 ```bash
-# npm
 npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Generate a static version if needed:
+
+```bash
+npm run generate
+```
+
+## Content Updates
+
+Most portfolio content can be updated in [`app/data/portfolio.ts`](/home/louise/Documents/projects/lws-portfolio/app/data/portfolio.ts).
+
+- Update hero, project, experience, skills, and contact data there.
+- Replace placeholder links and images with your real portfolio assets.
+- Add logo/image assets under `public/` if you want company branding in the experience section.
+
+## Notes
+
+- The portfolio was converted from a static mockup into reusable Nuxt components.
+- Navigation active state is driven by the current section in view.
+- Google Fonts and Material Symbols are loaded from `nuxt.config.ts`.
