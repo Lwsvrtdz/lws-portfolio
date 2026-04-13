@@ -13,31 +13,24 @@ export const philosophyPoints = [
 
 export const projectItems = [
   {
-    title: 'Enterprise CRM Engine',
+    title: 'Japan Nailist Association',
     description:
-      'A highly scalable customer relationship management tool designed for real-time lead tracking and automated marketing funnels.',
+      'Contributed to the official website experience for the Japan Nailist Association, supporting a polished multilingual presence for a professional audience in Japan.',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuDOrwLpRtm7_wnjZpwQERjUSsQ8v1Z4HytJcxV6SqvewblvtT8WAOsZmfC8h9AxpvBOXYjI5KoWhPKq5K5C2qI94PI7Kk5K5fgZgH5_4KOpRuFcuynOQhPCQOw66g5kfZ2McpdK6XpkFSCqu2fLUtfZyqvURlPPX8smA4yRDmspJSfNUFcOAKu6x9HDSj-jfW0-_27nhXynTjJ7jd-FZ7oJANRFxgxgpPYBjIPiR_20jvVhZDulbmlLvOhD1ewj0Wjf4AHSY8VU2Mcw',
-    alt: 'Dark futuristic dashboard interface with cyan data visualizations and charts on a clean midnight blue background',
-    tags: ['Laravel', 'Vue.js'],
+    alt: 'Professional website showcase card representing work contributed to the Japan Nailist Association website',
+    tags: ['Laravel', 'Web Development', 'International'],
+    href: 'https://www.nail.or.jp/english/index.html',
   },
   {
-    title: 'Serverless Analytics Portal',
+    title: 'Bonzo',
     description:
-      'Full-stack analytics platform leveraging Lambda functions for processing millions of data points per second with zero downtime.',
+      'Worked on Bonzo, a modern customer engagement platform focused on helping teams streamline communication and outreach through a polished web product.',
     image:
       'https://lh3.googleusercontent.com/aida-public/AB6AXuAjzXvO7KWcDaSr544_bYqqVPQHOMCO1Vcrc1yWIjgEKSISXte_h60i1fEEFqvOW1yJuSBSJm-EefpxODW7ubYJEratEzCc1M_3rYVSnMRNLBoLqYxqo02KNuGk_vZK7narQj0Xv6sCE30ZaIL0W_8-19x9bqYBDlLT1XPh4txIRvqlVnmobkQZ3D9TTPWI-LVTrS8ADwSOIkBC0n88pRQgj8W9olbiIOAOJy6z3BQ-NFNNXSjb6Mft3FXG98dxR1inTVItXxJQVr7N',
-    alt: 'Abstract 3D crystalline structure with neon cyan edges reflecting light in a deep void background',
-    tags: ['AWS', 'Node.js'],
-  },
-  {
-    title: 'SaaS Starter Kit v2',
-    description:
-      'A production-ready boilerplate for multi-tenant applications with built-in subscription management and modular billing.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDMp8eIYz62-6WuOudtftmXYU1inUgiJnJT9v6NfCYwFMycQ_aMw14jI18Ms2mih0BwlUArq_BlqzKGbn8sPBJ2RhqriPTUrRd9uLwwDQNsG64pUuh4jqA58Obkg_mAZu8MHKGhETHhkmM8XW8tS3S_DF5mxnqorcXVDbgh_8bes_ETb4WOZg1KuFsNSa_ZbdjhD4fVS1NGGS6vfpQ45vO3F1sUux9icaPYD5XQPo_9H40840vskDoQKyJz5UAHB7_ZTWmta3VTSZRn',
-    alt: 'Minimalist glowing code syntax highlighting on a terminal screen with blurred background elements',
-    tags: ['InertiaJS', 'Tailwind'],
+    alt: 'SaaS product showcase card representing engineering work contributed to the Bonzo platform',
+    tags: ['SaaS', 'Product Engineering', 'Full Stack'],
+    href: 'https://getbonzo.com/',
   },
 ]
 
@@ -132,15 +125,23 @@ export const contactLinks = [
     label: 'Email',
     value: 'louise.virtudazo@example.com',
     icon: 'mail',
+    href: 'mailto:louise.virtudazo@example.com',
   },
   {
     label: 'GitHub',
-    value: '@ishmael-virtudazo',
+    value: 'github.com/Lwsvrtdz',
     icon: 'hub',
+    href: 'https://github.com/Lwsvrtdz',
+  },
+  {
+    label: 'LinkedIn',
+    value: 'linkedin.com/in/louisevirtudazo',
+    icon: 'work',
+    href: 'https://www.linkedin.com/in/louisevirtudazo/',
   },
 ]
 
 export const footerLinks = [
-  { label: 'kernel_logs', href: '#' },
-  { label: 'man_pages', href: '#' },
+  { label: 'github', href: 'https://github.com/Lwsvrtdz' },
+  { label: 'linkedin', href: 'https://www.linkedin.com/in/louisevirtudazo/' },
 ]

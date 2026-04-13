@@ -4,6 +4,7 @@ defineProps<{
     label: string
     value: string
     icon: string
+    href?: string
   }>
 }>()
 </script>
@@ -21,7 +22,14 @@ defineProps<{
         </p>
 
         <div class="space-y-6">
-          <div v-for="link in links" :key="link.label" class="group flex items-center gap-4">
+          <a
+            v-for="link in links"
+            :key="link.label"
+            :href="link.href"
+            :target="link.href?.startsWith('http') ? '_blank' : undefined"
+            :rel="link.href?.startsWith('http') ? 'noreferrer' : undefined"
+            class="group flex items-center gap-4"
+          >
             <div
               class="flex h-12 w-12 items-center justify-center rounded-lg bg-surface-container text-primary transition-colors group-hover:bg-primary group-hover:text-on-primary"
             >
@@ -29,9 +37,9 @@ defineProps<{
             </div>
             <div>
               <p class="font-mono text-xs uppercase text-outline-variant">{{ link.label }}</p>
-              <p class="font-medium text-on-surface">{{ link.value }}</p>
+              <p class="font-medium text-on-surface transition-colors group-hover:text-primary">{{ link.value }}</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
 

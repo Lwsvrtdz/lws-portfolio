@@ -6,6 +6,7 @@ defineProps<{
     image: string
     alt: string
     tags: string[]
+    href: string
   }>
 }>()
 </script>
@@ -15,9 +16,9 @@ defineProps<{
     <div class="mb-16 flex items-end justify-between">
       <div>
         <h2 class="mb-4 font-mono text-sm uppercase tracking-[0.3em] text-primary">./repositories</h2>
-        <h3 class="font-headline text-5xl font-bold">Featured Projects</h3>
+        <h3 class="font-headline text-5xl font-bold">Recent Projects</h3>
       </div>
-      <div class="hidden font-mono text-outline-variant md:block">Total_Builds: 142</div>
+      <div class="hidden font-mono text-outline-variant md:block">Selected_Work: Live</div>
     </div>
 
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">

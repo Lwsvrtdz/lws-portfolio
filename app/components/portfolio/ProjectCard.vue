@@ -6,6 +6,7 @@ defineProps<{
     image: string
     alt: string
     tags: string[]
+    href: string
   }
 }>()
 </script>
@@ -41,8 +42,13 @@ defineProps<{
       <p class="mb-6 text-sm leading-relaxed text-on-surface-variant">
         {{ project.description }}
       </p>
-      <a href="#" class="group/link inline-flex items-center gap-2 font-mono text-sm text-primary">
-        EXECUTE_PROJECT
+      <a
+        :href="project.href"
+        target="_blank"
+        rel="noreferrer"
+        class="group/link inline-flex items-center gap-2 font-mono text-sm text-primary"
+      >
+        VIEW_PROJECT
         <span class="material-symbols-outlined transition-transform group-hover/link:translate-x-1">
           arrow_right_alt
         </span>
