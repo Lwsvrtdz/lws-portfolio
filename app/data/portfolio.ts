@@ -1,5 +1,6 @@
 export const navLinks = [
   { label: '~/home', href: '#home' },
+  { label: '/srv/availability', href: '#availability' },
   { label: '/dev/projects', href: '#projects' },
   { label: '/etc/experience', href: '#experience' },
   { label: '/bin/contact', href: '#contact' },
@@ -118,6 +119,45 @@ export const skillCards = [
     size: 'wide',
   },
   { title: 'Git', size: 'badge' },
+]
+
+export const availabilityServices = [
+  {
+    title: 'Technical audits',
+    description:
+      'Review an existing codebase, spot architectural risk, and turn scattered issues into a focused action plan your team can execute.',
+    icon: 'rule_settings',
+  },
+  {
+    title: 'Performance tuning',
+    description:
+      'Improve Laravel, PHP, SQL, and infrastructure bottlenecks with practical fixes that raise reliability without unnecessary rewrites.',
+    icon: 'speed',
+  },
+  {
+    title: 'Legacy modernization',
+    description:
+      'Stabilize older systems, introduce safer patterns, and move legacy code toward a maintainable, testable foundation.',
+    icon: 'build',
+  },
+  {
+    title: 'System design guidance',
+    description:
+      'Help shape backend architecture, APIs, deployment flows, and engineering decisions before they become expensive to undo.',
+    icon: 'schema',
+  },
+  {
+    title: 'Delivery process support',
+    description:
+      'Strengthen team workflows with clearer engineering practices, release discipline, and better collaboration between product and development.',
+    icon: 'lan',
+  },
+  {
+    title: 'Senior full-time leadership',
+    description:
+      'Available for full-time roles where I can own backend and full-stack execution, mentor engineers, and help teams ship with confidence.',
+    icon: 'badge',
+  },
 ]
 
 export const contactLinks = [

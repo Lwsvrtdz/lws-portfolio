@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import {
+  availabilityServices,
   contactLinks,
   experienceItems,
   footerLinks,
@@ -16,6 +17,7 @@ import {
     <main class="pt-16">
       <PortfolioHero />
       <PortfolioPhilosophy :points="philosophyPoints" />
+      <PortfolioAvailability :services="availabilityServices" />
       <PortfolioProjects :projects="projectItems" />
       <PortfolioExperience :items="experienceItems" />
       <PortfolioSkills :cards="skillCards" />
