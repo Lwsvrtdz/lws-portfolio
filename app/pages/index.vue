@@ -16,11 +16,11 @@ import {
     <PortfolioNavbar :links="navLinks" />
     <main class="pt-16">
       <PortfolioHero />
-      <PortfolioPhilosophy :points="philosophyPoints" />
       <PortfolioAvailability :services="availabilityServices" />
       <PortfolioProjects :projects="projectItems" />
       <PortfolioExperience :items="experienceItems" />
       <PortfolioSkills :cards="skillCards" />
+      <PortfolioPhilosophy :points="philosophyPoints" />
       <PortfolioContact :links="contactLinks" />
     </main>
     <PortfolioFooter :links="footerLinks" />
